@@ -1,0 +1,30 @@
+{
+  "name": "login",
+  "version": "1.0.0",
+  "description": "Sample Login Authentication",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Login",
+    "using",
+    "Node",
+    "js"
+  ],
+  "author": "Prithivi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "http": "0.0.0",
+    "jsonwebtoken": "^7.3.0",
+    "mongoose": "^4.8.5",
+    "morgan": "^1.8.1"
+  },
+  "engines": {
+    "node": ">=6.9.5"
+  },
+
+  "start":"node server.js"
+}

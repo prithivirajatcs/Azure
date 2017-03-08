@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>LoginPage</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="stylesheet" type="text/javascript" src="js/scripts.js"> -->
+	</head>
+
+<body>
+	<script>
+	// $('.loginBtn').click(function(){
+	// 	$.post('/send');
+	// });
+// function validateForm(){
+// 	var username = "username";
+// 	var password = "password";
+// 	var un = document.loginform.username.value;
+// 	var pw = document.loginform.password.value;
+// 	if ((un == username) && (pw == password)) {
+// 		return true
+// 	}
+// 	else {
+// 		alert("Login is unsuccessful");
+// 		return false;
+// 	}
+
+// }
+	</script> 
+	<div id="loginContainer" >
+	<form name="loginform"  action="/send" method="POST">
+		<div id="innerLoginContainer">
+			<input class="loginText" placeholder="username" type="text" name="usrname"><br><br>
+		
+			<input class="loginText" placeholder="password" type="password" name ="pasword"><br><br>
+
+			<input class="loginBtn" type="submit" " value="LOGIN" name="submitButton"><br><br>
+
+
+
+
+
+		</div>
+		
+	</form>
+</div>
+</body>
+</html>
