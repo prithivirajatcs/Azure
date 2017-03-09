@@ -78,7 +78,7 @@ app.use(bodyParser());
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.htm'));
 });
-app.get("/getData", function(req,res){
+app.get("/.auth/login/aad/callback", function(req,res){
   console.log(req.query.postData);
   res.write("{Data:'Prithvi'}");
     res.end();
