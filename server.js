@@ -64,10 +64,10 @@ app.get('/setup', function(req, res) {
 // app.use(bodyParser.json());
 // app.use(morgan("dev"));
 // app.use(function(req,res,next){
-// 	res.setHeader('Access-Control-Allow-Origin', '*');
-// 	res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
-// 	res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
-// 	next();
+//  res.setHeader('Access-Control-Allow-Origin', '*');
+//  res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+//  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
+//  next();
 // })
 
 // viewed at http://localhost:8080
@@ -79,8 +79,8 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.htm'));
 });
 app.get("/getData", function(req,res){
-	console.log(req.query.postData);
-	res.write("{Data:'Prithvi'}");
+  console.log(req.query.postData);
+  res.write("{Data:'Prithvi'}");
     res.end();
     console.log(app.post);
 });
@@ -111,19 +111,19 @@ app.post("/send", function(req,res){
 //     });
 
 
-	var username = "prithivi";
-	var password = "Raja";
-	var un = req.body.usrname;
-	var pw = req.body.pasword;
+  var username = "prithivi";
+  var password = "Raja";
+  var un = req.body.usrname;
+  var pw = req.body.pasword;
 
-	if ((un == username) && (pw == password)) {
-		console.log("authenticated");
+  if ((un == username) && (pw == password)) {
+    console.log("authenticated");
 
     var options = {
     'expiresIn': '1h'
     };
 
-		var token = jwt.sign(un, app.get('superSecret')
+    var token = jwt.sign(un, app.get('superSecret')
          // expiresIn: 60*60*24 // expires in 24 hours
         );
 
@@ -138,15 +138,15 @@ var string = encodeURIComponent(token);
           token: token
         });
 
-		//res.write("Done");
-		//res.redirect("http://www.google.co.in/");
+    //res.write("Done");
+    //res.redirect("http://www.google.co.in/");
 
 
-	}
-	else {
-		console.log("Not authenticated");
-		res.write("failed");
-	}
+  }
+  else {
+    console.log("Not authenticated");
+    res.write("failed");
+  }
     // console.log("Post Method");
     // res.write("Post Methiod is called");
 
@@ -166,7 +166,7 @@ var string = encodeURIComponent(token);
  //        res.json({ success: false, message: 'Authentication failed. Wrong password.' });
  //      } else {
 
- //      	 // if user is found and password is right
+ //        // if user is found and password is right
  //        // create a token
  //        var token = jwt.sign(user, app.get('superSecret'), {
  //         // expiresInMinutes: 1440 // expires in 24 hours
