@@ -31,9 +31,9 @@ app.use(bodyParser.json());
 app.use(morgan('dev'));
 
 // basic route
-app.get('/', function(req, res) {
-    res.send('Hello! The API is at http://localhost:' + port + '/api');
-});
+// app.get('/', function(req, res) {
+//     res.send('Hello! The API is at http://localhost:' + port + '/api');
+// });
 
 app.get('/setup', function(req, res) {
 
@@ -75,7 +75,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser());
 
-app.get('/Index', function(req, res) {
+app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.htm'));
 });
 app.get("/getData", function(req,res){
