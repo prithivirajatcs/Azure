@@ -130,7 +130,7 @@ app.post("/send", function(req,res){
         // return the information including token as JSON
 var string = encodeURIComponent(token);
      console.log(string);
-     res.redirect('Index/?valid=' + string);
+     res.redirect('/?valid=' + string);
      
         res.json({
           success: true,
